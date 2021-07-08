@@ -346,7 +346,7 @@ class ViewController: UIViewController {
         
         var username = ""
         //1. Create the alert controller.
-        let alert = UIAlertController(title: "Congo", message: "Enter your name", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Congretulation", message: "Enter Playername", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in

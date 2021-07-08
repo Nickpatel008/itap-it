@@ -62,6 +62,15 @@ class LeaderboardVC: UIViewController {
     }()
     
     
+    private let btnPlayAgain:UIButton = {
+        let mybtn = UIButton()
+        mybtn.backgroundColor = .yellow
+        mybtn.setTitle("Play Again", for: .normal)
+        mybtn.layer.cornerRadius = 5
+        //mybtn.addTarget(self, action: #selector(""), for: .touchUpInside)
+        return mybtn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "LeaderBoard"
@@ -79,6 +88,8 @@ class LeaderboardVC: UIViewController {
         label5.text = score
         print(score!)
         
+        view.addSubview(btnPlayAgain)
+        
     }
     
     
@@ -94,6 +105,9 @@ class LeaderboardVC: UIViewController {
         label2.frame = CGRect(x: 264, y: 127, width: 58, height: 30)
         label5.frame = CGRect(x: view.width - 100, y: label3.bottom + 30 , width: 300, height: 40)
         label4.frame = CGRect(x: 30, y: label3.bottom + 30 , width: 300, height: 40)
+        
+        btnPlayAgain.frame = CGRect(x: 98, y: 545, width: 178, height: 47)
+        
     }
     
 }
