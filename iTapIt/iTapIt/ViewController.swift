@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     private let appName:UILabel = {
        let myLabel = UILabel()
         myLabel.text = "Tap-it"
-        myLabel.font = UIFont(name: "popoins-semibold", size: 30)
+        myLabel.font = UIFont(name: "arial", size: 30)
         myLabel.textColor = .black
         return myLabel
     }()
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
     private let label1:UILabel = {
         let myLabel = UILabel()
         myLabel.text = "Your Score :- "
-        myLabel.font = UIFont(name: "popoins-semibold", size: 20)
+        myLabel.font = UIFont(name: "arial", size: 20)
         myLabel.textColor = .black
         return myLabel
     }()
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
     private var label2:UILabel = {
         let myLabel = UILabel()
         myLabel.text = "0"
-        myLabel.font = UIFont(name: "popoins-semibold", size: 20)
+        myLabel.font = UIFont(name: "arial", size: 20)
         myLabel.textColor = .black
         return myLabel
     }()
@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         mybtn.backgroundColor = .black
         mybtn.backgroundColor = .green
         mybtn.setTitle("Start", for: .normal)
-        mybtn.layer.cornerRadius = 5
+        mybtn.layer.cornerRadius = 25
         mybtn.addTarget(self, action: #selector(handleStartBtn), for: .touchUpInside)
         return mybtn
     }()
@@ -136,7 +136,7 @@ class ViewController: UIViewController {
         let mybtn = UIButton()
         mybtn.backgroundColor = .black
         mybtn.setTitle("Stop", for: .normal)
-        mybtn.layer.cornerRadius = 5
+        mybtn.layer.cornerRadius = 25
         mybtn.backgroundColor = .red
         mybtn.addTarget(self, action: #selector(handleStopBtn), for: .touchUpInside)
         return mybtn
@@ -161,8 +161,9 @@ class ViewController: UIViewController {
         
         view.addSubview(label1)
         view.addSubview(label2)
-        view.addSubview(btnStart)
+        
         view.addSubview(btnStop)
+        view.addSubview(btnStart)
         
         let tab1 = UITapGestureRecognizer(target: self, action: #selector(checkScoreView1))
         tab1.numberOfTapsRequired = 1
@@ -213,10 +214,10 @@ class ViewController: UIViewController {
       
         BGImage.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
         
-        appName.frame = CGRect(x: 139, y: 49, width: 96, height: 45)
+        appName.frame = CGRect(x: 139, y: 70, width: 96, height: 45)
         
-        label1.frame = CGRect(x: 38, y: 465, width: 80, height: 30)
-        label2.frame = CGRect(x: 137, y: 465, width: 34, height: 30)
+        label1.frame = CGRect(x: 38, y: 495, width: 150, height: 30)
+        label2.frame = CGRect(x: 180, y: 495, width: 34, height: 30)
         btnStart.frame = CGRect(x: 98, y: 545, width: 178, height: 47)
         btnStop.frame = CGRect(x: 98, y: 545, width: 178, height: 47)
     }
@@ -225,7 +226,7 @@ class ViewController: UIViewController {
         
         btnStart.isHidden = true
         btnStop.isHidden = false
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(gamestart), userInfo: .none, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(gamestart), userInfo: .none, repeats: true)
         
         
     }

@@ -23,7 +23,7 @@ class LeaderboardVC: UIViewController {
         let lb = UILabel()
         lb.text = ""
         lb.font = UIFont.boldSystemFont(ofSize: 25)
-        lb.textColor = .white
+        lb.textColor = .black
         
         return lb
     }()
@@ -32,7 +32,7 @@ class LeaderboardVC: UIViewController {
         let lb = UILabel()
         lb.text = "Name"
         lb.font = UIFont.boldSystemFont(ofSize: 20)
-        lb.textColor = .white
+        lb.textColor = .black
         
         return lb
     }()
@@ -40,7 +40,7 @@ class LeaderboardVC: UIViewController {
         let lb = UILabel()
         lb.text = "Score"
         lb.font = UIFont.boldSystemFont(ofSize: 20)
-        lb.textColor = .white
+        lb.textColor = .black
         
         return lb
     }()
@@ -48,7 +48,7 @@ class LeaderboardVC: UIViewController {
         let lb = UILabel()
         lb.text = " "
         lb.font = UIFont.boldSystemFont(ofSize: 20)
-        lb.textColor = .white
+        lb.textColor = .black
         
         return lb
     }()
@@ -56,7 +56,7 @@ class LeaderboardVC: UIViewController {
         let lb = UILabel()
         lb.text = "  "
         lb.font = UIFont.boldSystemFont(ofSize: 20)
-        lb.textColor = .white
+        lb.textColor = .black
         
         return lb
     }()
@@ -66,7 +66,8 @@ class LeaderboardVC: UIViewController {
         let mybtn = UIButton()
         mybtn.backgroundColor = .yellow
         mybtn.setTitle("Play Again", for: .normal)
-        mybtn.layer.cornerRadius = 5
+        mybtn.setTitleColor(.black, for: .normal)
+        mybtn.layer.cornerRadius = 25
         //mybtn.addTarget(self, action: #selector(""), for: .touchUpInside)
         return mybtn
     }()
@@ -99,12 +100,12 @@ class LeaderboardVC: UIViewController {
         
         BGImage.frame = CGRect(x: 0, y: 0, width: view.width, height: view.height)
         
-        label1.frame = CGRect(x: 20, y: 100, width: 300, height: 40)
+        label1.frame = CGRect(x: 120, y: 100, width: 300, height: 40)
       
-        label3.frame = CGRect(x: 59, y: 127, width: 62, height: 30)
-        label2.frame = CGRect(x: 264, y: 127, width: 58, height: 30)
-        label5.frame = CGRect(x: view.width - 100, y: label3.bottom + 30 , width: 300, height: 40)
-        label4.frame = CGRect(x: 30, y: label3.bottom + 30 , width: 300, height: 40)
+        label2.frame = CGRect(x: 60, y: 185, width: 62, height: 30)
+        label3.frame = CGRect(x: 250, y: 185, width: 58, height: 30)
+        label4.frame = CGRect(x: 80, y: label3.bottom + 30 , width: 300, height: 40)
+        label5.frame = CGRect(x: 270, y: label3.bottom + 30 , width: 300, height: 40)
         
         btnPlayAgain.frame = CGRect(x: 98, y: 545, width: 178, height: 47)
         
